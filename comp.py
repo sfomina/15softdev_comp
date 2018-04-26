@@ -1,4 +1,4 @@
-def passCheck(password):
+def check(password):
     upper = [char for char in password if char.isupper()]
     lower = [char for char in password if char.islower()]
     num = [char for char in password if char.isdigit()]
@@ -8,7 +8,7 @@ def passCheck(password):
         print "INVALID PASSWORD"
 
 
-def passStrength(password):
+def strength(password):
     upper = [char for char in password if char.isupper()]
     lower = [char for char in password if char.islower()]
     num = [char for char in password if char.isdigit()]
@@ -26,13 +26,13 @@ def passStrength(password):
         strength += 3
     return  "Strength: " + str(strength)
 
-passStrength("123") #2
-passStrength("1238") #3
-passStrength("apple") #2
-passStrength("bob234") #5
-passStrength("f12A34") #7
-passStrength("asdh@#@aT1234!") #10
+strength("123") #2
+strength("1238") #3
+strength("apple") #2
+strength("bob234") #5
+strength("f12A34") #7
+strength("asdh@#@aT1234!") #10
 
-passCheck("123") #invalid
-passCheck("hello") #invalid
-passCheck("Hello123") #valid
+check("123") #invalid
+check("hello") #invalid
+check("Hello123") #valid
